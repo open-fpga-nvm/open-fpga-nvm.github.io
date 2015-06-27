@@ -7,4 +7,4 @@ permalink: /repository/
 ---
 
 # Repository
-* [Open FPGA NVM git-hub repository](open-fpga-nvm-src)
+* [Open FPGA NVM git-hub repository](https://github.com/open-fpga-nvm)
