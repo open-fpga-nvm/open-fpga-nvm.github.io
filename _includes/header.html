@@ -1,0 +1,14 @@
+<header>
+<a href="{{ site.baseurl }}/"><h1>{{ site.title }}</h1></a>
+<p></p>
+
+<div class="trigger">
+{% assign sorted_pages = site.pages | sort:"name" %}
+{% for page in sorted_pages %}
+  {% if page.title %}
+  <p class="view"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></p>
+  {% endif %}
+{% endfor %}
+</div>
+
+</header>
