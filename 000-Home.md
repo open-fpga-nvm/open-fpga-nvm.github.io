@@ -6,7 +6,9 @@ categories: open-fpga-nvm manual
 permalink: /home/
 ---
 
-##Open-NVM
+#Open-NVM
+
+##Why and What? 
 
 In recent years, several non-volatile memory (NVM) technologies have demonstrated great potential in resolving the critical challenges of modern memory systems, namely density, latency, and power. Since these state-of-the-art NVMs offer high storage capacity and reasonable performance with low power consumption, extensive research is being carried out to fit these NVMs into the different layers of the existing memory hierarchy. 
 
