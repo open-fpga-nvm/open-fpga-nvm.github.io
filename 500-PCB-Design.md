@@ -1,14 +1,15 @@
 ---
 layout: post
 title:  "PCB Design"
-date:   2015-06-26 17:10:00
+date:   2015-06-29 12:10:00
 categories: open-fpga-nvm manual
-permalink: /design/
+permalink: /pcb-design/
 ---
 
 #PCB
 
 ##NVM Daughter Board
+
 _Custom Printed Circuit Daughter Board for proper connection with memory controller!_
 
 This short guidance will direct you from selecting the right vendor for PCB to assembling it. In this case, the purpose of our PCB is to connect NVM  to memory controller development board. 

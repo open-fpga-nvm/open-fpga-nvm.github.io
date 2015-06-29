@@ -1,12 +1,14 @@
 ---
 layout: post
-title:  "Setup"
-date:   2015-06-26 17:10:00
+title:  "Setup Manual"
+date:   2015-06-29 12:10:00
 categories: open-fpga-nvm manual
 permalink: /setup/
 ---
 
-# Hardware Setup
+
+**@Gieseo: This section should include the step by step guideline instructing interested user how to recreate the Open-NVM platform.**
+
 
 ## Apparatus
 The whole scheme has been evolved with the main apparatus of: 
@@ -57,8 +59,8 @@ Custom Printed Circuit Daughter Boards for proper connection with memory control
 1. Button B = pause
 
 # Serial communication
-* MRAM
-* TLC-NAND
+    * MRAM
+    * TLC-NAND
 
 #Table of contents
 * Home
