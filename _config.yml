@@ -1,10 +1,8 @@
 # Site settings
-title: Open FPGA NVM
-email: gieseo.park@utdallas.edu
+title: Open-NVM
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
-#twitter_username: kisuo
-#facebook_username: kisuo
+
 github_username:  open-fpga-nvm
 
 # Build settings
