@@ -6,11 +6,14 @@ categories: open-fpga-nvm manual
 permalink: /miscellaneous/
 ---
 
+# **@@@ How'bout removing this page?**
+
+
+
 **Download Links**
 
-1. [Install Window-7]()
-1. [Install Modelsim]()
-1. [Install ISE]()
+1. [Xilinx ISE]()
+2. [Digilent Adept]
 
 
 **Tutorials**

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: home
 title:  "Home"
 date:   2015-06-29 12:10:00
 categories: open-fpga-nvm manual
