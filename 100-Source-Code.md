@@ -6,7 +6,17 @@ categories: open-fpga-nvm manual
 permalink: /source/
 ---
 
-**@Gieseo: Link to codes (host controller and Verilog) should go here** 
+# Software
+* Verilog source code for FPGA part(Nexys 3)
+    * TLC NAND Flash
+	* MRAM
+* Python source code for host PC-Controller side
+    * Host controller
+	* Log parser
+* [**Download**: Repository of _Open NVM Software Source Code_](https://github.com/open-fpga-nvm/open-nvm-source)
 
-# Repository
-* [Open FPGA NVM git-hub repository](https://github.com/open-fpga-nvm)
+# Hardware
+* PCB Schematics wirked with PCB Artist
+* List of components used
+* Information of where we ordered the PCB and other components
+* [**Download**: Repository of _Open FPGA NVM Hardware data_](https://github.com/open-fpga-nvm/open-nvm-hardware)
