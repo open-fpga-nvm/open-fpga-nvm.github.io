@@ -13,25 +13,32 @@ The daughter board in our Open-NVM is a custom printed circuit board (PCB) desig
 This short guidance will direct you from selecting the right vendor for PCB to assembling it. In this case, the purpose of our PCB is to connect NVM  to memory controller development board. 
 
 If you are using same development board and NVM like ours:
+
 * Nexys-3 FPGA development board to build the memory controller and its VHDCI expansion for connecting NVM  
 * [MRAM-MR2A16A](http://www.everspin.com/family/mr2a16a), TLC-NandFlash-MT29F64G08EBAA as for NVM
  
 You may directly use our [gerber files](https://github.com/lubmn/PCB/tree/master/design) and components for PCB order and assembly. And when you do so, it is assumed that you have clear understanding about purpose and type of each I/O, PCB Layout, components etc. Either-way steps and procedures are common.  
 
 #Steps and Procedures
-This demonstration is for the PCB-beginners, who have PCB-basics and complete understanding of system-schematic; If you are not a beginner you may like to skip this part and directly --> i) Download PCB tool ii) Select components iii) Produce PCB and iv) Assemble it. The whole design cycle may take as long as couple of weeks or as short as couple of days depending on designer's expert level and manufacturer's turnaround time plus shipping and handling delay.....  
- 
+This demonstration is for the PCB-beginners, who have PCB-basics and complete understanding of system-schematic; If you are not a beginner you may like to skip this part and directly
+
+1. Download PCB tool
+1. Select components
+1. Produce PCB and
+1. Assemble it.
+	
+The whole design cycle may take as long as couple of weeks or as short as couple of days depending on designer's expert level and manufacturer's turnaround time plus shipping and handling delay.....  
 
 For beginners like me I got to go through following questions, procedures, steps and have learnt from my own mistake.  
 
-###1. Why we need PCB 
+##1. Why we need PCB 
 Well, our purpose is simply to connect the NVM to the controller, simple breadboard could serve the purpose. And you may use breadboard or universal board, but it will make the connections, debug process complex and harden more with number of I/O's and density of the pin. For example, think about you are connecting 8 MR2A16A MRAMs, which means 8x40=320 I/O's. In our case, we are using VHDCI and SATA connectors which is almost impossible to connect in regular breadboard, whereas PCB has made our life simpler and easier. 
  
-###2. PCB Manufacturer to choose
+##2. PCB Manufacturer to choose
 In case you are not making your own PCB, you should decide on the PCB manufacturing company. Here I consider four main 'P's i) Precision, ii) Pace, ii) Pricing and iii)Production Delay. For example, we are using VHDCI connectors of 0.8 mm pitch, our circuit may run at 500 MHz, therefore who can serve these with minimum pricing and considerable turnaround time. As a beginner I also wanted to work with a company who can provide high level of customer support with quick response. We go with [Advance Circuits](http://www.4pcb.com), I recommend them for their unbroken assistance; and guess what, we have 1p0 success. One more thing I like to mention, if you like to get rid of shipping and handling cost, you may like to find some company in town. And I would like to try to manufacture it our own, and will give you update later on if we get success.
 
 
-###3. Choose the right PCB Tools
+##3. Choose the right PCB Tools
 For chosing PCB tools you may look for 
   
  * Required PCB laout-precision and speed compatibility 
@@ -48,7 +55,7 @@ For chosing PCB tools you may look for
 The most popular today's PCB layout tools are Cadence Allegro, Mentor Graphics Pads,  Altium designer, Eagle etc. While only Eagle is Mac-compitible; only Allegro is guarantied for design of 10GHz range. Each may have its own unique advantages and limitations. But all of them are kind of pricy for a student like me. Though they are advanced enough to design any kind of board, it doesn’t mean you should chose that for a beginner project. Choosing the right tool for the layout should be decided at the very beginning. I got to chose PCB-Artist the one offered by the same vendor we have chosen ['Advance Circuits'](http://www.4pcb.com) in order to make order placement straight-forward and this do meet all our criteria like precision and speed. And top of everything it is free.
 
 
-###4. Select Components
+##4. Select Components
 Before designing the PCB you have to decide on your components, because that's the particular footprint You will be drawing. Some are pretty specific you may not have much option to chose from. While same kind of components may be offered from various vendors with different footprint. Decision should have been done depending on 
  * Price
  * Footprint
@@ -57,14 +64,16 @@ Before designing the PCB you have to decide on your components, because that's t
  
 There are various reliable websites you can search and order your components, like [Digikey](http://www.digikey.com/), [Amazon](http://www.amazon.com/). You may like to order in bunches for common components like pin-headers or sockets, while any particular pricy one should be ordered the amount you need. Sometimes to get specific research components, could be challenging, as they may not be in production or distributor would only agree to supply in gigantic amount. We get little dilemma to find out Micron TLC-NandFlash for small-quantity of 20pcs; whereas distributor don't agree to sell or send even samples, if it is less than 2000 pcs. I like to thank [America II Electronics](http://www.americaii.com) to help us for solving this issue by supplying 20 pcs of TLC-NandFlash. You should prepare complete [_BOM_](Appendix) at this point. 
 
-In our case, for each TLC-NandFlash PCB we required 
+In our case, for each TLC-NandFlash PCB we required
+
  * One [VHDCI-68 connector](http://www.digikey.com/product-detail/en/0714300008/WM7303-ND/572157) in order to connect our FPGA development board
  * One [SATA connector](http://www.digikey.com/product-detail/en/0877030001/WM19111-ND/1499168) to connect our power measurement board
  * Two 24-0.1"pitch DIP socket strips(breakable) to plug in 48 pin DIP sockets for TLC-Nand
  * Bunches of pin headers (>50 counts) for alternate line option and debug/probing.   
 We also used [VHDCI cable connector](https://www.digilentinc.com/Products/Catalog.cfm?NavPath=2,393&Cat=3#VHDCI-M2M-CABLE) (male to male type, as both of our development board and PCB has male type VHDCI), and [header-jumper](http://www.amazon.com/2-54mm-Standard-Circuit-Shunts-Jumper/dp/B00HR8DGZO) for line selection.
   
-#5. Produce PCB
+##5. Produce PCB
+
 As you have already known the system you are building, and have chosen your components, now you are ready to layout the PCB. For successful PCB production and avoiding trial and error repetition, if you are building the system for the first time, either you should develop your system and test it using breadboard, or build and test it with schematic. All the renowned PCB tools offer schematic along with it but not testability. You may use Verilog-A/VHDL-AMS to perform any system level testing, incase you are building a complicated, zero tolerance and 1st part success; but that is an another story and has not been followed here, as ours is a simple straightforward case. We have tested partly with breadboard and layout ours using PCB Artist. As an advanced designer, you may directly layout your PCB without component and schematic, still here I am including the steps I have followed (but not detail procedure of PCB-artist-tool: go through PCB-artist-help wizard for that) which is kind of typical and some additional tips those were taken in account to:
 
 1. [Know your tools](http://www.4pcb.com/pcb-software-tips-tools.html): If you are a first time PCB designer you go through PCB artist's [video tutorial](http://www.4pcb.com/pcb-software-tips-tools.html). You should be familiar with the file-structure, location, hot keys, terms, rules, co-ordinate-system, grids etc. you may like to go through once 'PCB-Artist Help->Contents', when you open PCB-Artist first. 
@@ -85,28 +94,31 @@ As you have already known the system you are building, and have chosen your comp
 1. [PCB Schematic](http://www.4pcb.com/pcb-software-tips-tools.html): If you are a pro, you may like to avoid creating schematic for a trivial case and can directly layout PCB. I highly recommend to create Schematic, review once more your system, go through specification of each part you are using, know about any development board you are connecting, know about your power supply, consider rating of each pin of every component etc, consider the speed that each pin may get or provide; you should also know if you have any [_static-sensitive_](Appendix) pin in your electronic component, calculate values for any passive elements like capacitor/resistor/inductor if you may require. For e.g. for our TLC-NandFlash we need pull up resistors for ready/busy pin. I have simply chosen its value of 2.2 K-ohm, from Resistor-Current curve provided in the product specification, so that current to that node would remain less than 2mA and assuming Cout<10pF which means RC-time constant is faster than 22ns. I found the next link good enough for having detail conception of [Pull-Up-Resistor Calculation](http://www.edn.com/design/analog/4371297/Design-calculations-for-robust-I2C-communications). 
  
 1. [PCB Layout](http://www.4pcb.com/pcb-software-tips-tools.html): So this is the main thing for what we are talking all these. Procedures and steps are mentioned well enough in [advanced circuit's web](http://www.4pcb.com/pcb-software-tips-tools.html). Here I will mention the art and agony of this:  
-  **Art**
- * Build it for minimum cost with optimum requirements
- * The art of this is to build it for minimum area.
- * Start placing with main components, i.e. mostly your traces would run between.
- * If the connectors or headers possess symmetric pin-out, place the main component that would be connected to it symmetric with respect to it.
- * Calculate your trace width for power bus for maximum possible current. The beautiful art is, current cannot escape through the shortest resistive path but divide into all possible path according to their conductance. Its important you know the worst current density of your trace. 
- * Start with laying-out power and ground trace.
- * Put all the info for PCB-designer (i.e. you) to review with document layer.
- * Put all the info for System-builder or PCB-user to review with silk-screen Layer.
 
-  **Agony**
- * Auto-placement and Auto-routing may not do the art of layout. 
- * PCB-Artist auto-routes failed for highly dense footprints like 'VHDCI'.   
- * Never put Text with metal (when you have option).
- * No point to put silk-screen text beneath the component.
- * Don't skip drawing ['_keep-out_'](Appendix) e.g. your components body that are touching PCB; and then check manually, if it has anything on its way. PCB Artist don't have the brain yet to check keep-out.
- * Don't forget to put assembling-holes of your component.   
+    **Art**
+	
+    * Build it for minimum cost with optimum requirements
+    * The art of this is to build it for minimum area.
+    * Start placing with main components, i.e. mostly your traces would run between.
+    * If the connectors or headers possess symmetric pin-out, place the main component that would be connected to it symmetric with respect to it.
+    * Calculate your trace width for power bus for maximum possible current. The beautiful art is, current cannot escape through the shortest resistive path but divide into all possible path according to their conductance. Its important you know the worst current density of your trace. 
+    * Start with laying-out power and ground trace.
+    * Put all the info for PCB-designer (i.e. you) to review with document layer.
+    * Put all the info for System-builder or PCB-user to review with silk-screen Layer.
+	
+    **Agony**
+	
+    * Auto-placement and Auto-routing may not do the art of layout. 
+    * PCB-Artist auto-routes failed for highly dense footprints like 'VHDCI'.   
+    * Never put Text with metal (when you have option).
+    * No point to put silk-screen text beneath the component.
+    * Don't skip drawing ['_keep-out_'](Appendix) e.g. your components body that are touching PCB; and then check manually, if it has anything on its way. PCB Artist don't have the brain yet to check keep-out.
+    * Don't forget to put assembling-holes of your component.   
  
 1. [Placing Order](http://www.4pcb.com/media/basic-design-requirement-order-process.pdf): After you are done with your layout, when place the order by 'order now' button at menu-bar, it will automatically check DRC, LVS and produce gerber.  Always remember LVS, DRC are formal procedure for creating gerber, and definitely help you for debug and make success, but they are not any substitute of your intellectual visualization or depth in knowledge about your circuit.  
 
-###Assemble
-...... under development.......
+##Assemble
+Place the components onto right position/holes, and solder it!
 
 ##NVM-PCB FootPrints, Files and Figures
 * NVM Spec
@@ -183,26 +195,3 @@ Take a look at the TLC-Nand above try to tell how we can improve. If you guess a
   - One life ending error which may kill the Design--> VHDCI Vcc trace-bridge via (the one near to PCB edge) was chosen all-layer, which cause direct contact with VHDCI-body frame (which is metallic for our case) may often keep grounded, that may result Vcc short circuit. We fix it by PCB-corrector patch during assembly on that particular via-contact. 
 
 Make Comments if you observe anymore.
-
-
-...................  
-
-
-#Table of contents
-* Home
-* [Scheme Structure](Structure)
- - [FPGA Based NVM Controller](FPGA Configuration)
- - [NVM Daughter Board in PCB](PCB Design)
- - [Software Development for Application Host](Parse Writing) 
-* [Hardware Setup](Setup)
- - [Apparatus](Setup)
- - [Scheme](Structure)
- - [Prerequisite](Setup)
- - [Step by Step Set up](Setup)
- - [Test Procedure](NVM Test Result)
-* [NVM Test and Result](NVM Test Result) 
-* [Tutorial](Tutorial)
-* [Resources](Resources)
-* [Appendix](Appendix)
-* [Contact](Contact)
-* [Disclaimer](Disclaimer)
