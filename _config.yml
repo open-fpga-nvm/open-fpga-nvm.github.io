@@ -6,4 +6,7 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 github_username:  open-fpga-nvm
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
