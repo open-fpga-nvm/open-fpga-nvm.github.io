@@ -8,7 +8,7 @@ permalink: /how-to/
 
 # How to use the repository code
 
-* **Commandline commands are base on Windows environment.**
+* **Environment is base on _Windows 7_.**
 
 ## FPGA Code
 1. Required Tools
