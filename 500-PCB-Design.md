@@ -6,12 +6,10 @@ categories: open-fpga-nvm manual
 permalink: /pcb-design/
 ---
 
-#PCB
 
 ##NVM Daughter Board
 
-_Custom Printed Circuit Daughter Board for proper connection with memory controller!_
-
+The daughter board in our Open-NVM is a custom printed circuit board (PCB) designed to work as a pedestal for the NVM chip under test, and provide the required connectivity between the chip and the FPGA board. 
 This short guidance will direct you from selecting the right vendor for PCB to assembling it. In this case, the purpose of our PCB is to connect NVM  to memory controller development board. 
 
 If you are using same development board and NVM like ours:

@@ -6,7 +6,7 @@ categories: open-fpga-nvm manual
 permalink: /home/
 ---
 
-#Open-NVM
+
 
 ##Why and What? 
 
