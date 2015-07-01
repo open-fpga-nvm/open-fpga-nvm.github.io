@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Setup Manual"
+title:  ""
 date:   2015-06-29 12:10:00
 categories: open-fpga-nvm manual
 permalink: /setup/

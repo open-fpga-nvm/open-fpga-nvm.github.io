@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Daughter Board (PCB) Design"
-date:   2015-06-29 12:10:00
+date:   2015-07-01 05:10:00
 categories: open-fpga-nvm manual
 permalink: /pcb-design/
 ---

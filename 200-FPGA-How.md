@@ -1,14 +1,22 @@
 ---
 layout: post
-title:  "How-to"
-date:   2015-06-29 12:10:00
+title:  "Instruction Manual"
+date:   2015-07-01 04:10:00
 categories: open-fpga-nvm manual
 permalink: /how-to/
 ---
 
-# How to use the repository code
+**We developed the Open-NVM platform in _Windows 7_ environment.**
 
-* **Environment is base on _Windows 7_.**
+## Apparatus
+The whole scheme has been evolved with the main apparatus of: 
+ 
+1. FPGA Development Boards: Configured for NVM Memory Controller.  
+1. Daughter Board: PCB to Connect NVM with Controller.   
+1. PC/Laptop: i) For Configuring FPGA ii) Providing Host-Apps for User-interactive-mode.   
+Not to mention, we will also need:
+* Accessories (PC-peripherrals)
+* Connectors (USB, VHDCI etc)
 
 ## FPGA Code
 1. Required Tools
@@ -95,22 +103,23 @@ permalink: /how-to/
 	1. Tips
         - There is also command line based script file _ofserial.py_ which we used in initial stage of development.
         - For debugging for serial communication, we used a serial port monitoring tool [_Realterm_](http://realterm.sourceforge.net) which is also an open sourced project.
-    
+	
 1. Script file grammar
     - Every dictionary in **actions** array are executed and result are saved to log files.
     - **'NAME'**: _Log file name_ for saving capture result
     - **'CMDS'**: Series of actions for setting the configuration or doing action
 
-        | Type         | Description      | Parameters |
-        | ------------ | ---------------- | ---------- |
-        | **uADDR()**  | Address Range    | (_Start_Address_, _End_Address_) <br> NAND: Block Address <br> MRAM: Byte Address|
-        | **uOPER()**  | Operation Filter | _oWR_: Write <br> _oRD_: Read <br> _oER_:Erase <br> _oRST_:Reset |
-        | **uLOOP()**  | Loop Count       | NAND: Block Address |
-        | **uLOG()**   | Log Frequency    | How frequently FPGA will return result <br> 0=return every result |
-        | **uNAND()**  | NAND Options     | _pLSB/pCSB/pMSB_: Filter page type for doing operations <br> _ptrn_usrX_: True=(user data pattern), False=(column address as data pattern) <br> _ptrn_usr0_ is applied to even page, and _ptrn_usr1_ is applied to odd page |
-        | **uSTART()** | Start Testing    | Start the testing with above settings |
+    | Type         | Description      | Parameters |
+    | ------------ | ---------------- | ---------- |
+    | **uADDR()**  | Address Range    | (_Start_Address_, _End_Address_) <br> NAND: Block Address <br> MRAM: Byte Address|
+    | **uOPER()**  | Operation Filter | _oWR_: Write <br> _oRD_: Read <br> _oER_:Erase <br> _oRST_:Reset |
+    | **uLOOP()**  | Loop Count       | NAND: Block Address |
+    | **uLOG()**   | Log Frequency    | How frequently FPGA will return result <br> 0=return every result |
+    | **uNAND()**  | NAND Options     | _pLSB/pCSB/pMSB_: Filter page type for doing operations <br> _ptrn_usrX_: True=(user data pattern), False=(column address as data pattern) <br> _ptrn_usr0_ is applied to even page, and _ptrn_usr1_ is applied to odd page |
+    | **uSTART()** | Start Testing    | Start the testing with above settings |		
 
-
+	
+	
 ##Log Parser
 1. Required Tools
     - Python 2.7.x: Python interpreter

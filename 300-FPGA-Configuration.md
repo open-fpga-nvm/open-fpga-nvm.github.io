@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "FPGA and NVM Controller"
+title:  "FPGA Based NVM Controller"
 date:   2015-07-01 07:10:00
 categories: open-fpga-nvm manual
 permalink: /fpga-config/
 ---
 
-
+The main object of this project is to design a NVM controller for emerging NVM, (e.g., MRAM, Nand Flash, PCM, etc.) that can extract all the characteristics of NVM those determine their performance and quality, and then provide a user-friendly-testablle platform. The whole scheme is developed mainly by designing one universal NVM controller by configuring same FPGA which serve this purpose. 
 
 ##FPGA Development Board: Nexys 3
 
