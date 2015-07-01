@@ -1,15 +1,11 @@
 ---
 layout: post
-title:  "FPGA Configuration"
-date:   2015-06-29 12:10:00
+title:  "FPGA and NVM Controller"
+date:   2015-07-01 07:10:00
 categories: open-fpga-nvm manual
 permalink: /fpga-config/
 ---
 
-
-#FPGA Configuration
-
-**@Gieseo: please complete the blank subsections or remove them as per your judgment**
 
 
 ##FPGA Development Board: Nexys 3
@@ -23,11 +19,9 @@ Customized Daughter board has been designed depending on the memory type so that
 1. [Schematic](http://www.digilentinc.com/Data/Products/NEXYS3/NEXYS3_sch.pdf)
 
 
-##NVM-Controller Requirement:
+##NVM Controller Requirements:
 
-To decide on FPGA and the board have to be done according to the design/system requirement cost effectively.
-
-**System Requirement**: Determined by board and FPGA
+**System Requirement:** (These are determined by the FPGA and the daughter board)
 
 1. One single Controller that may control all (at least): MRAM, TLC-Nand, PCM etc.
 1. Number of I/O control signals = 40
@@ -41,37 +35,15 @@ To decide on FPGA and the board have to be done according to the design/system r
 1. I/O static-shock protection requirement: no
 1. Flexible Debug Facility: should
 
-**Controller Design Requirement**: Depends only on FPGA
+**Controller Design Requirement**: (These are determined by the FPGA and the daughter board)
 
 1. Number of gates need to design this kind of controller ~5K
 1. Number of SRAM ~2K
 1. Number of Register ~2K
 1. Clock management availability: Required 
 
-______________________________________________________________________________________________
 
-______________________________________________________________________________________________
-
-
-#NVM Controller Design
-
-##**Design Primitive**
-
-   - **Function**
-   - **Black Box**
-   - **Basic Blocks**
-
-##**Board Deployment**
-   
-   - **Power Up**
-   - **UART**
-   - **Clocking**
-   - **Spartan-6**  
-      * Memory controller State M/C
-      * Queue Register
-      * Debug controller 
-   - **I/O Assignment**
-   - **Debug Auxiliaries**
+##NVM Controller Design
 
 ###MRAM Controller Mapping
  
@@ -91,7 +63,7 @@ ________________________________________________________________________________
 
 
 ###**Configuration with ISE**
-- **ISE OS requirement:** windows7, Linux. [(Problems with Windows8)](http://www.eevblog.com/forum/microcontrollers/guide-getting-xilinx-ise-to-work-with-windows-8-64-bit/msg479087/?PHPSESSID=d60f5ba67c76d757fe50e0f103c42e27#msg479087), [(Problems with Window-server)]().
+- **ISE OS requirement:** windows7, Linux. [(We faced issues with Windows 8, and Windows Server)](http://www.eevblog.com/forum/microcontrollers/guide-getting-xilinx-ise-to-work-with-windows-8-64-bit/msg479087/?PHPSESSID=d60f5ba67c76d757fe50e0f103c42e27#msg479087).
 - **Download ISE:**[(Download ISE)]
 - **Open ISE:** 
 
@@ -102,6 +74,3 @@ ________________________________________________________________________________
   + Configure Target Device
   + Analyze Design
 
-
-
-Hardware set-up and connection details are provided in [Hardware Implementation](Setup). In addition, for sample evaluation of NVM products with the Open-NVM platform, please refer to [NVM Test and Result](NVM Test Result) section.
