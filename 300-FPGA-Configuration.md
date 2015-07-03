@@ -6,7 +6,7 @@ categories: open-fpga-nvm manual
 permalink: /fpga-config/
 ---
 
-The main object of this project is to design a NVM controller for emerging NVM, (e.g., MRAM, Nand Flash, PCM, etc.) that can extract all the characteristics of NVM those determine their performance and quality, and then provide a user-friendly-testablle platform. The whole scheme is developed mainly by designing one universal NVM controller by configuring same FPGA which serve this purpose. 
+The main object of this project is to design a flexible and affordable NVM controller for emerging NVM products (e.g., MRAM, Nand Flash, PCM, etc.) that can extract all the critical characteristics determine their performance and quality. We implemented our scheme by designing one universal NVM controller by reconfiguring the same FPGA. 
 
 ##FPGA Development Board: Nexys 3
 

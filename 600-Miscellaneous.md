@@ -16,7 +16,7 @@ permalink: /miscellaneous/
 * NVM Spec
   + [MRAM](http://www.everspin.com/family/mr2a16a)
   + [TLC-Nand](http://www.micron.com/parts/nand-flash/mass-storage/mt29f64g08ebaaawp?pc={9E356F28-3F5E-4FF7-A8D5-657A26EC58BE})
-  + [PCM](http://webcache.googleusercontent.com/search?q=cache:GwWMtaLG7oMJ:https://www.micron.com/~/media/Documents/Products/Data%2520Sheet/PCM/p8p_parallel_pcm_ds.pdf+&cd=3&hl=en&ct=clnk&gl=us&client=safari)
+  
 
 * PCB Component Footprints 
   + [DIP-Socket](http://www.precidip.com/eMagStudio/2012-12-12/DIL_SIL_TO_SOCKETS/index.html#/1/)
