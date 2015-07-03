@@ -8,7 +8,7 @@ permalink: /code-structure/
 
 # Code
 
-1. State Machine
+1. State Machines
     - Main Loop States
     
     ```verilog
@@ -41,20 +41,25 @@ permalink: /code-structure/
         - TX
         - RX
     - Debug Loop
-        - 7-Segment
-        - ( LEDs are not in loop, just shows state number of NVM part )
+        - There is a state machine for displaying all of 4 digits of 7-Segments
+        - ( FYI, LEDs are not in loop, just shows state number of NVM state machine. )
 
 2. Physical pin definition
-    - In Verilog code, .ucf file defines which pins are connected to which pin
-    - Regarding pinout of PCB design, simply matching the pis on ucf file makes it working.
-    ![](https://github.com/open-fpga-nvm/open-nvm-hardware/blob/master/pic/tlcNand_VHDCI_conn.png)
-    ![](https://github.com/open-fpga-nvm/open-nvm-hardware/blob/master/pic/MRAM_VHDCI_conn.png)
+    - In Verilog code, _.ucf_ file defines which pins are connected to which pin.
+    - PIN names are described in _Nexys 3_ manual.
+    - Regarding pinout of PCB design, simply matching the pins definition on _.ucf_ file makes it connection.
     
-    
+        - TLC NAND pin-connection
+
+            <img src="https://raw.githubusercontent.com/open-fpga-nvm/open-nvm-hardware/master/pic/tlcNand_VHDCI_conn.png" width="350">
+
+        - MRAM pin-connection
+
+            <img src="https://raw.githubusercontent.com/open-fpga-nvm/open-nvm-hardware/master/pic/MRAM_VHDCI_conn.png" width="400">
 
 # Packet Structure
 1. Common characteristics
-    - Baudrate: 1152000 bps
+    - Baud-rate: 1152000 bps
     - Using Big-Endian for data values
         - In-code pySerial initialization
         
@@ -66,9 +71,8 @@ permalink: /code-structure/
             ```verilog
             `define BIT_TMR_MAX 10'd869
             ```
-            - How to calculate the number **869**:
-                - Current FPGA Clock = 100Mhz ( 1tick = 10ns )
-                - Our desired spec = 1152000bps
+            - How to calculate the counter number _869_:
+                - Current FPGA Clock = 100Mhz ( 1tick = 10ns ), target baud-rate = 1152000bps
                 - (100,000,000ticks/s) / (115200bits/s) = 869ticks/bit
 
 1. PC → Board (FPGA - RX)
@@ -118,6 +122,7 @@ permalink: /code-structure/
 2. Board → PC (FPGA - TX)
     - Result
     - 14 bytes per each packet
+    - This data is captured/saved into log file and processed with _parser_.
     - RAW Packet Structure
     ![](/resource/image/packet-tx.png)
     - In-code implementation (Verilog part)

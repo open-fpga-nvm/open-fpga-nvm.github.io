@@ -99,7 +99,7 @@ Place the components on the right position/holes, and solder the PCB.
 ## PCB Drawing
 
 ### MRAM 
-![](https://raw.githubusercontent.com/lubmn/PCB/master/pic/pcb_mram.png)
+![](https://raw.githubusercontent.com/open-fpga-nvm/open-nvm-hardware/master/pic/pcb_mram.png)
 
 ### TLC NAND Flash 
-![](https://raw.githubusercontent.com/lubmn/PCB/master/pic/pcb_tlcNand.png)
+![](https://raw.githubusercontent.com/open-fpga-nvm/open-nvm-hardware/master/pic/pcb_tlcNand.png)
