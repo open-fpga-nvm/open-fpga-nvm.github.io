@@ -10,23 +10,23 @@ permalink: /eval-results/
 
 ### Average and Maximum Latency
 
-![](/resource/image/flash_lat1.png)
+![](/resource/image/flash_lat1.PNG)
  
 ### Static Analysis of Latency Variation
 
-![](/resource/image/flash_lat2.png)
+![](/resource/image/flash_lat2.PNG)
  
 ### Dynamic Analysis of Latency Variation
 
-![](/resource/image/flash_lat3.png)
+![](/resource/image/flash_lat3.PNG)
 
 ### BER Analysis 
 
-![](/resource/image/flash_error.png)
+![](/resource/image/flash_error.PNG)
  
 ### Power Consumption Trend
 
-![](/resource/image/flash_pwr.png)
+![](/resource/image/flash_pwr.PNG)
 
  
  
@@ -34,13 +34,13 @@ permalink: /eval-results/
 
 ### Data Validation
 
-![](/resource/image/mram_validation.png)
+![](/resource/image/mram_validation.PNG)
  
 ### Access Latency vs. Current Consumption
-![](/resource/image/mram_current.png)
+![](/resource/image/mram_current.PNG)
  
 ### Power and Energy Trend 
-![](/resource/image/mram_pwreng.png)
+![](/resource/image/mram_pwreng.PNG)
  
  
      
