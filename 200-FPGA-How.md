@@ -35,6 +35,7 @@ Not to mention, we will also need:
         ![](/resource/image/fpga-how-project-setting.png)
 	3. Add Verilog source files(.v) into the project.
 	4. Execute _Generate Program file_ in 'Design' window.
+        ![](/resource/image/fpga-how-project-build.png)
 	5. Download Program file (.bit) to Nexys 3 board by using Digilent Adept.
         - 7-segment will show the number after downloading.
     6. Use the host controller application.
