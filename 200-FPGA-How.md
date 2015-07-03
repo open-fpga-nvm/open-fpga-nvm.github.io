@@ -119,7 +119,7 @@ Not to mention, we will also need:
     | **uNAND()**  | NAND Options     | _pLSB/pCSB/pMSB_: Filter page type for doing operations <br> _ptrn_usrX_: True=(user data pattern), False=(column address as data pattern) <br> _ptrn_usr0_ is applied to even page, and _ptrn_usr1_ is applied to odd page |
     | **uSTART()** | Start Testing    | Start the testing with above settings |		
 
-	
+
 	
 ##Log Parser
 1. Required Tools
