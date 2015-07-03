@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sample Evaluation Results"
-date:   2015-07-02 07:25:00 PM
+date:   2015-07-03 11:25:00 AM
 categories: open-fpga-nvm manual
 permalink: /eval-results/
 ---
