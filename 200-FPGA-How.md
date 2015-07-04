@@ -139,6 +139,7 @@ Not to mention, we will also need:
             ```
 	
     3. Log file
+        - For details of log file, please refer to [packet structure](/code-structure/#packet-structure).
         - After parsing, log file is saved as _.csv_ format.
         - Basically, we used the _Microsoft Excel_ for further analysis of parsed data.
 				
