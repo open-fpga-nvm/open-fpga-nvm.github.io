@@ -28,23 +28,23 @@ The full citation for the paper is as follows:
 
 
 
-_Zhang, J., Park, G., Shihab, M., Donofrio, D., Shalf, J., and Jung, M., “OpenNVM: An Open-Sourced FPGA-based NVM Controller for Low Level Memory Characterization." In Computer Design (ICCD), 2015 33rd IEEE International Conference on. IEEE, 2015._
+    Zhang, J., Park, G., Shihab, M., Donofrio, D., Shalf, J., and Jung, M., “OpenNVM: An Open-Sourced   
+	FPGA-based NVM Controller for Low Level Memory Characterization." In Computer Design (ICCD), 2015   
+	33rd IEEE International Conference on. IEEE, 2015.
 
 
 
 
 **BIBTEX:**
 
-_@inproceedings{wang2014proactivedram,_
 
-  _title={OpenNVM: An Open-Sourced FPGA-based NVM Controller for Low Level Memory Characterization},_
-  
-  _author={Zhang, Jie and Park, Gieseo and Shihab, Mustafa and  Donofrio David and Shalf, John and Jung, Myoungsoo},_
-  
-  _booktitle={Computer Design (ICCD), 2015 33nd IEEE International Conference on},_
-  
-  _year={2015},_
-  
-  _organization={IEEE}_
-_}_
+
+	@inproceedings{zhang2015opennvm,
+	 title={OpenNVM: An Open-Sourced FPGA-based NVM Controller for Low Level Memory Characterization},
+	 author={Zhang, Jie and Park, Gieseo and Shihab, Mustafa and  Donofrio David and Shalf, John and   
+	 Jung, Myoungsoo},
+	 booktitle={Computer Design (ICCD), 2015 33nd IEEE International Conference on},
+	 year={2015},
+	 organization={IEEE}
+	}
 			
