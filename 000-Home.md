@@ -14,7 +14,7 @@ In recent years, several non-volatile memory (NVM) technologies have demonstrate
 
 Even though existing studies have explored theoretical potential of the NVMs and offered unprecedented insight into memory management techniques for NVM systems, the publicly available data, for most part, is generated from overly simplified analytic models or from simulation based studies that have not yet been verified for real devices. Accurate characterization of real device samples is essential for understanding the true potential of the emerging non-volatile memories (NVMs), and identifying their optimal placement in the memory hierarchy. Though NVM products are now available from different manufacturers, lack of appropriate NVM controller and evaluation platform in the public domain is the main challenge in extracting empirical data from these emerging NVM technologies.
 
-To address this challenge, we have developed **Open-NVM** - _an open sourced Field-Programmable Gate Array (FPGA) based NVM evaluation and characterization platform equipped with an efficient, highly configurable NVM controller_. Our Open-NVM can cope with diversified memory transactions and cover a variety of evaluation workloads without any FPGA logic block updates. In our design, while evaluation scripts are managed by a host, all the NVM-related transactions are handled by our FPGA-based NVM controller connected to the hardware circuit board that can accommodate different types of NVM product and our custom-made power measurement board. 
+To address this challenge, under the supervision of [Dr. Myoungsoo Jung](http://camelab.org/pmwiki.php),  we have developed **OpenNVM** - _an open sourced Field-Programmable Gate Array (FPGA) based NVM evaluation and characterization platform equipped with an efficient, highly configurable NVM controller_. Our OpenNVM can cope with diversified memory transactions and cover a variety of evaluation workloads without any FPGA logic block updates. In our design, while evaluation scripts are managed by a host, all the NVM-related transactions are handled by our FPGA-based NVM controller connected to the hardware circuit board that can accommodate different types of NVM product and our custom-made power measurement board. 
 
 This open scheme has been developed to generate exhaustive, empirical data of emerging non-volatile memory in a configured, programmable FPGA based hardware prototype in order to serve the area in research on memories especially non-volatile type. This characterization platform can extract the critical parameters of the  non-volatile memories, such as - 
 * Latency
@@ -25,7 +25,7 @@ This open scheme has been developed to generate exhaustive, empirical data of em
 
 
 ##Overview
-Our Open-NVM platform is required to execute different categories of memory request and diverse workloads, while
+Our OpenNVM platform is required to execute different categories of memory request and diverse workloads, while
 it needs to accommodate various types of NVM devices as well. However, once the logic gates are designed and
 implemented, it is challenging to update their logic blocks to cover a wide spectrum of such execution conditions. To address this, we separate the FPGA logic into three major different modules as shown in Figure 6 : i) communication module, ii) operation manager, and iii) memory controller. 
 
@@ -51,4 +51,4 @@ Specifically, the communication module is responsible for receiving the commands
  
 This wiki is full step by step tour, so that one can easily mimic this to build their own FPGA scheme, as a memory-controller either to characterize NVM or build any new NVM-system. This will also help in directing many FPGA based IC test and building any FPGA based prototype.
 
-If you feel that **Open-NVM** was helpful for your own work, please cite our [NVM-FPGA]() work. 
+_If you feel that **OpenNVM** was helpful for your research, we would sincerely appreciate if you [cite our work] (/acknowledgement/#Citation) published in ICCD'2015._
