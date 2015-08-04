@@ -102,4 +102,4 @@ Place the components on the right position/holes, and solder the PCB.
 ![](https://raw.githubusercontent.com/lubmn/PCB/master/pic/pcb_mram.png)
 
 ### TLC NAND Flash 
-![](https://raw.githubusercontent.com/lubmn/PCB/master/pic/pcb_tlcNand.png)
+![](/resource/image/pcb_tlcNand.png)
