@@ -99,7 +99,7 @@ Place the components on the right position/holes, and solder the PCB.
 ## PCB Drawing
 
 ### MRAM 
-![](https://raw.githubusercontent.com/lubmn/PCB/master/pic/pcb_mram.png)
+![](/resource/image/pcb_mram.png)
 
 ### TLC NAND Flash 
 ![](/resource/image/pcb_tlcNand.png)
