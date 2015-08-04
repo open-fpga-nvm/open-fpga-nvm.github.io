@@ -8,19 +8,16 @@ permalink: /acknowledgement/
 
 #Acknowledgement
 
-The Open-NVM platform has been developed under the supervision of Professor Myoungsoo Jung, PhD - as a part of our ongoing effort to aid the research of emerging NVM technologies, specifically to enable accurate empirical evaluation of real NVM products and prototypes.
+The Open-NVM platform has been developed under the supervision of [Professor Myoungsoo Jung, PhD] (http://camelab.org/pmwiki.php)- as a part of our ongoing effort to aid the research of emerging NVM technologies, specifically to enable accurate empirical evaluation of real NVM products and prototypes.
 This work is the result of effort and contributions from the following group of people -
 
-* Jie Zhang - School of Integrated Technologies - Yonsei University.
-* Gieseo Park - School of Integrated Technologies - Yonsei University, and Computer Architecture and Memory Systems Laboratory - University of Texas at Dallas .
-* Mustafa Shihab - School of Integrated Technologies - Yonsei University, and Computer Architecture and Memory Systems Laboratory - University of Texas at Dallas .
-* David Donofrio - Computer Architecture Laboratory, Lawrence Berkeley National Laboratory 
-* John Shalf - Computer Architecture Laboratory, Lawrence Berkeley National Laboratory
+* Jie Zhang
+* Gieseo Park
+* Mustafa Shihab
+* David Donofrio
+* John Shalf
 
-
-and [**Professor Myoungsoo Jung, PhD**] (http://camelab.org/pmwiki.php) - School of Integrated Technologies, Yonsei University 
-
-
+We also sincerely appreciate Lubaba Nahar's effort in setting up the initial PCB designs for our FPGA-based NVM evaluation platform.
 
 #Citation
 [OpenNVM] () has been published as a full paper in ICCD'2015. Should you consider OpenNVM to be helpful for your research, we would sincerely appreciate if you cite our publication accordingly.
