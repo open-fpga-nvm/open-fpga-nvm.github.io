@@ -38,7 +38,7 @@ The full citation for the paper is as follows:
 
 	@inproceedings{zhang2015opennvm,
 	 title={OpenNVM: An Open-Sourced FPGA-based NVM Controller for Low Level Memory Characterization},
-	 author={Zhang, Jie and Park, Gieseo and Shihab, Mustafa and  Donofrio David and Shalf, John and   
+	 author={Zhang, Jie and Park, Gieseo and Shihab, Mustafa and Donofrio, David and Shalf, John and   
 	 Jung, Myoungsoo},
 	 booktitle={Computer Design (ICCD), 2015 33nd IEEE International Conference on},
 	 year={2015},
