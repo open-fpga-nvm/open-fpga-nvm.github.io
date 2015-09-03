@@ -6,14 +6,14 @@ categories: open-fpga-nvm manual
 permalink: /fpga-config/
 ---
 
-The main object of this project is to design a flexible and affordable NVM controller for emerging NVM products (e.g., MRAM, Nand Flash, PCM, etc.) that can extract all the critical characteristics determine their performance and quality. We implemented our scheme by designing one universal NVM controller by reconfiguring the same FPGA. 
+The main object of this project is to design a flexible and affordable NVM controller for emerging NVM products (e.g., MRAM, Nand Flash, PCM, etc.) that can extract all the critical characteristics and determine their performance and quality. We implemented our scheme by designing one universal NVM controller by reconfiguring the same FPGA. 
 
 ##FPGA Development Board: Nexys 3
 
-The Nexys 3 is a digital circuit development platform based on the Xilinx Spartan-6 LX16 FPGA. It includes a wide range of required peripherals - 10/100 Ethernet connection, 16MB of embedded RAM, USB-UART, USB host port for mice and keyboards, high-speed expansion connector, 4-digit seven-segment display, 100MHz CMOS oscillator, and and 32MB PCM memory. Nexys-3 board is utilized in order to design our  NVM controller for extracting performance characteristics in an optimized and efficient way. For more information on  the Nexys 3 product please visit: http://www.digilentinc.com/Data/Products/NEXYS3/
+The Nexys 3 is a digital circuit development platform based on the Xilinx Spartan-6 LX16 FPGA. It includes a wide range of required peripherals - 10/100 Ethernet connection, 16MB of embedded RAM, USB-UART, USB host port for mice and keyboards, high-speed expansion connector, 4-digit seven-segment display, 100MHz CMOS oscillator, and 32MB PCM memory. Nexys-3 board is utilized in order to design our  NVM controller for extracting performance characteristics in an optimized and efficient way. For more information on  the Nexys 3 product please visit: http://www.digilentinc.com/Data/Products/NEXYS3/
 
-A General purpose Computer with keyboard, mouse and monitor is used for user application to serve the purpose of both configuring FPGA and for providing the test instruction for the memory device under test and also collecting all the DUT characteristic data to save into it. A total customized host application has been build into it so that the programmable directed data can be collected depending on the DUT type and test category.
-Customized Daughter board has been designed depending on the memory type so that it can be accordingly connected to the memory controller, built in Spartan-6 FPGA through nexys-3 development board’s high-speed expansion connector. 
+A general-purpose computer with a keyboard, mouse and monitor is used to serve the purpose of both configuring the FPGA and for providing the test instruction for the memory device under test and also collecting all the DUT characteristic data to save into it. A completely customized host application has been build into it so that the programmable directed data can be collected depending on the DUT type and test category.
+A customized daughterboard has been designed so that it can be connected to different types of NVM products. The daughterboard  connects to the FPGA via through nexys-3 development board’s high-speed expansion connector. 
 
 1. [Manual](http://www.digilentinc.com/Data/Products/NEXYS3/Nexys3_rm_V2.pdf)
 1. [Schematic](http://www.digilentinc.com/Data/Products/NEXYS3/NEXYS3_sch.pdf)

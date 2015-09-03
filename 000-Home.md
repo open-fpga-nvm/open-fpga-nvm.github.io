@@ -31,7 +31,7 @@ implemented, it is challenging to update their logic blocks to cover a wide spec
 
 ![](/resource/image/design_overview.png)
 
-Specifically, the communication module is responsible for receiving the commands and reporting the results through the protocol we defined, and the operation manager composes specific NVM requests based on the commands requested by the host and forward it to the underlying memory controller. The memory controller then generates specific signal for different types of NVM devices. This logic design ours allows us to not only cover diverse NVM memory products but also flexibly control a broad range of memory workloads, as the NVM operations and access patterns can be simply composed and requested from the host (without any FPGA modification). Lastly, we built a customized printed circuit board (PCB) that connects the FGPA and the real NVM device through a veryhigh-density cable interconnect (VHDCI) and can select power sources for measuring NVM device power consumption. In this PCB design, we also expose all test pins connected to external logic analyzer, and can connect different types of chip sockets.
+Specifically, the communication module is responsible for receiving the commands and reporting the results through the protocol we defined, and the operation manager composes specific NVM requests based on the commands requested by the host and forward it to the underlying memory controller. The memory controller then generates specific signals for different types of NVM devices. This logic design of ours allows us to not only cover diverse NVM memory products but also flexibly control a broad range of memory workloads, as the NVM operations and access patterns can be simply composed and requested from the host (without any FPGA modification). Lastly, we built a customized printed circuit board (PCB) that connects the FPGA and the real NVM device through a veryhigh-density cable interconnect (VHDCI) and can select power sources for measuring NVM device power consumption. In this PCB design, we also expose all test pins connected to external logic analyzer, and can connect different types of chip sockets.
 
 
      
@@ -49,6 +49,6 @@ Specifically, the communication module is responsible for receiving the commands
   1. Speed-test Mode 
 
  
-This wiki is full step by step tour, so that one can easily mimic this to build their own FPGA scheme, as a memory-controller either to characterize NVM or build any new NVM-system. This will also help in directing many FPGA based IC test and building any FPGA based prototype.
+This wiki is a full step by step tour, so that one can easily mimic this to build their own FPGA scheme, as a memory-controller either to characterize NVM or build any new NVM-system. This will also help in directing many FPGA based IC test and building any FPGA based prototype.
 
 _If you feel that **OpenNVM** was helpful for your research, we would sincerely appreciate if you [cite our work] (/acknowledgement/#Citation) published in ICCD'2015._

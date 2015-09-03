@@ -7,7 +7,7 @@ permalink: /pcb-design/
 ---
 
 
-## Why we need PCB? 
+## Why do we need a PCB? 
 Since our basic goal is to connect the NVM to the controller, theoretically, a simple breadboard could serve the purpose. However, it will make the connection and the debug process exponentially complex with increasing number of I/Os and density of the pins. For example, to connect the MR2A16A MRAM chip we need 320 I/Os. To deal with this, we used VHDCI and SATA connectors with our PCB which was almost impossible with regular breadboards.
 
 
@@ -30,7 +30,7 @@ Some of the currently popular PCB layout tools are Allegro (Cadence), Pads (Ment
 While selecting the PCB design tool one should look out for -  
   
  * Compatibility with required PCB layout-precision and latency 
- * Easiness of LVS and DRC debug and fixing
+ * Ease of LVS and DRC debug and fixing
  * Availability of footprint wizard 
  * Efficient Auto-routing and Auto-placement  
  * Manageable libraries and files 
@@ -40,13 +40,13 @@ While selecting the PCB design tool one should look out for -
 
 
 ###2. Selecting Required Components
-Before actually designing the PCB, one need to decide on the components, as that changes the design drawing. Some of the components are pretty specific, while others may be offered from various vendors with different footprint. Selection should have been done depending on 
+Before actually designing the PCB, one needs to decide on the components, as that changes the design drawing. Some of the components are pretty specific, while others may be offered from various vendors with different footprint. Selection should have been done depending on 
  * Price
  * Footprint
  * Electrical property
  * Minimum quantity to order and number of quantity you like to have
  
-There are various reliable websites you can search and order your components, like [Digikey](http://www.digikey.com/), [Amazon](http://www.amazon.com/). Sometimes to get specific research components, could be challenging, as they may not be in production or distributor would only agree to supply in gigantic amount. I like to thank [America II Electronics](http://www.americaii.com) for helping us out with the TLC NAND Flash chips.  
+There are various reliable websites you can search and order your components, like [Digikey](http://www.digikey.com/), [Amazon](http://www.amazon.com/). Sometimes getting specific research components can be challenging, as they may not be in production or the distributor would only agree to supply in large amount. We would like to thank [America II Electronics](http://www.americaii.com) for helping us out with the TLC NAND Flash chips.  
 
 In our case, for each TLC-NandFlash PCB we required
 
@@ -65,14 +65,14 @@ For an efficient PCB design and for avoiding trial and error repetition, one sho
 **Create Component:**
 For this, there are three basic steps: 
   1.  Create schematic symbol: for using it in the PCB schematic, 
-  1.  Create PCB symbol: This is the physical footprint your are laying-out that will be used in the PCB, and 
-  1.  Create Component: for making consistency between your schematic and layout.                                
+  2.  Create PCB symbol: This is the physical footprint that your are laying out and will be used in the PCB, and 
+  3.  Create Component: for consistency between your schematic and layout.                                
 
-  There are thousands of components available and ready to use from millions/billions of components in the market. Instead of looking for available library to your tool, it may be better to build our own ones, as this takes much shorter time - once you are familiar with the tools and PCB-basic. However, for the more complex components, such as [VHDCI-68](http://www.molex.com/pdm_docs/sd/714300008_sd.pdf) building the symbols could take longer time. Your selected component vendor should provide the required information for the footprint. For example, in our case, we used [VHDCI](http://www.molex.com/pdm_docs/sd/714300008_sd.pdf), and [SATA](http://www.molex.com/pdm_docs/sd/877030001_sd.pdf) connector.
+  There are thousands of components available and ready to use from millions/billions of components in the market. Instead of looking for available library to your tool, it may be better to build our own ones, as this takes much less time - once you are familiar with the tools and PCB-basic. However, for the more complex components, such as [VHDCI-68](http://www.molex.com/pdm_docs/sd/714300008_sd.pdf) building the symbols could take more time. Your selected component vendor should provide the required information for the footprint. For example, in our case, we used [VHDCI](http://www.molex.com/pdm_docs/sd/714300008_sd.pdf), and [SATA](http://www.molex.com/pdm_docs/sd/877030001_sd.pdf) connector.
 
 
 **PCB Schematic:** 
-Unless absolutely sure, we highly recommend to create a schematic first, and review the design, specification of each part, the power supply, and rating of each pin of every component. 
+Unless one is absolutely sure, we highly recommend to create a schematic first, and review the design, specification of each part, the power supply, and rating of each pin of every component. 
  
 **PCB Layout:** 
 The important points to consider for PCB layout design are [advanced circuit's web](http://www.4pcb.com/pcb-software-tips-tools.html) : 
@@ -81,7 +81,7 @@ The important points to consider for PCB layout design are [advanced circuit's w
 * Build it for minimum area.
 * Start by placing the main components your traces would run between.
 * If the connectors or headers possess symmetric pin-out, place the main component that would be connected to it symmetric with respect to it.
-* Calculate your trace width for power bus for maximum possible current. The beautiful art is, current cannot escape through the shortest resistive path but divide into all possible path according to their conductance. Its important you know the worst current density of your trace. 
+* Calculate your trace width for power bus for maximum possible current. The key consideration is, current cannot escape through the shortest resistive path but gets divided into all possible path according to their conductance. Its important that one knows the worst current density of the trace. 
 * Start by laying out power and ground trace.
 * Put all the info for PCB-designer to review with document layer.
 * Put all the info for System-builder or PCB-user to review with silk-screen Layer.

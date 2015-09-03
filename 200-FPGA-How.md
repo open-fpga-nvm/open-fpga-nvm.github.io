@@ -6,7 +6,7 @@ categories: open-fpga-nvm manual
 permalink: /how-to/
 ---
 
-**We developed the Open-NVM platform in _Windows 7_ environment.**
+**We developed the Open-NVM platform in a _Windows 7_ environment.**
 
 ## Apparatus
 The whole scheme has been evolved with the main apparatus of: 

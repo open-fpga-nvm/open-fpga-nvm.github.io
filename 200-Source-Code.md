@@ -16,7 +16,7 @@ permalink: /source/
 * [**Download**: Repository of _Open NVM Software Source Code_](https://github.com/open-fpga-nvm/open-nvm-source)
 
 # Design Files
-* PCB Schematics wirked with PCB Artist
+* PCB Schematics designed with PCB Artist
 * List of components used
 * Information of where we ordered the PCB and other components
 * [**Download**: Repository of _Open FPGA NVM Hardware data_](https://github.com/open-fpga-nvm/open-nvm-hardware)
